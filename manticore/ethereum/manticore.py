@@ -522,7 +522,9 @@ class ManticoreEVM(ManticoreBase):
             Build a reasonable set of symbolic arguments matching the types list
         """
         from . import abitypes
-
+             '''
+                 abitypes.parse(types) ? should be abitypes.parse(type)?
+             '''
         return self._make_symbolic_arguments(abitypes.parse(types))
 
     def _make_symbolic_arguments(self, ty):
